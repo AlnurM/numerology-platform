@@ -13,7 +13,7 @@ const ClientProfile = ({ data }) => {
           <span className="text-sm text-gray-700">{data.birthDate}</span>
         </div>
       )}
-      <div>
+      <div className='overflow-hidden' style={{ width: size, height: size }}>
         {data.photo ? (
           <img className="w-full" src={data.photo} alt={data.firstName} /> 
         ) : (

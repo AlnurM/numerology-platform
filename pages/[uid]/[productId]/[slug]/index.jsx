@@ -73,7 +73,7 @@ const ProductDetailed = ({ data }) => {
           </div>
         </div>
       )}
-      {currentContent.form && (!data.form.some(f => f.length > 3) || isEditable) && (
+      {currentContent.form && (!data.form?.some(f => f.length > 3) || isEditable) && (
         <>
           {currentContent.form.map((question, index) => (
             <TextField
@@ -90,7 +90,7 @@ const ProductDetailed = ({ data }) => {
           </Button>
         </>
       )}
-      {(!isEditable && data.form.some(f => f.length > 3)) && (
+      {(!isEditable && data.form?.some(f => f.length > 3)) && (
         <div className="py-3 flex flex-col justify-center items-center bg-green-100 rounded-xl">
           <Icon width={128} height={128} src="/assets/ic_success.png" />
           <span className="mt-3 text-lg">Ваш ответ принят!</span>

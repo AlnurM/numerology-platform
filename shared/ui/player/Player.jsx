@@ -13,6 +13,7 @@ const Player = ({ width, src = "" }) => {
           width: isMobile ? width : 800,
           height: isMobile ? 200 : 450,
           language: 'en',
+          videoType: 'h264',
           pausePlacement: "center",
           isShowScreenshot: false,
           isShowPicture: false,

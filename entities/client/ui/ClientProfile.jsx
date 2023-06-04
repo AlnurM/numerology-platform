@@ -15,7 +15,7 @@ const ClientProfile = ({ data }) => {
       )}
       <div>
         {data.photo ? (
-          <img src={data.photo} alt={data.firstName} /> 
+          <img className="w-full" src={data.photo} alt={data.firstName} /> 
         ) : (
           <Icon width={size} height={size} src="/assets/ic_profile.svg" />
         )}

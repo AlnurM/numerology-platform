@@ -20,20 +20,17 @@ const Header = () => {
       .then(client => setClient(client))
   }, [])
 
-  if (!client.uid) {
-    return (
-      <div className="py-8 px-6 sm:py-12 sm:px-12 min-h-[146px] background-white"></div>
-    )
-  }
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>{title || 'Pythia'}</title>
       </Head>
-      <div className="py-8 px-6 sm:py-12 sm:px-12 min-h-[146px] background-white flex items-center justify-between">
-        <h1 className="text-2xl sm:text-3xl font-medium leading-snug text-gray-900">{title}</h1>
-        <ClientProfile data={client} />
-      </div>
+      {client.uid && (
+        <div className="py-8 px-6 sm:py-12 sm:px-12 min-h-[146px] background-white flex items-center justify-between">
+          <h1 className="text-2xl sm:text-3xl font-medium leading-snug text-gray-900">{title}</h1>
+          <ClientProfile data={client} />
+        </div>
+      )}
     </>
   )
 }
